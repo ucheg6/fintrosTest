@@ -30,6 +30,10 @@ const Section = styled.section`
     width: 100%;
     margin: 0 auto;
     position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 250px;
+    padding-bottom: 0;
   }
 `
 

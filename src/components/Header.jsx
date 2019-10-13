@@ -46,8 +46,10 @@ const H1 = styled.h1`
     font-size: 2em;
   }
   line-height: 1.2em;
-  @media (max-width: 768px) {
-    font-size: 4em;
+  &:first-of-type {
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `
 const P = styled.p`
@@ -65,6 +67,9 @@ const Ul = styled.ul`
   list-style: none;
   margin: 6em 0 0 0;
   padding: 0;
+  @media (max-width: 768px) {
+    display: none;
+  }
   li {
     align-self: center;
     margin: 0 1.2em;
@@ -94,9 +99,6 @@ const Ul = styled.ul`
       &:before {
         content: none;
       }
-    }
-    @media (max-width: 768px) {
-      display: none;
     }
   }
 `

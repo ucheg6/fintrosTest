@@ -9,7 +9,7 @@ export function useStories(storyIds, count) {
     if (storyIds.length) {
       getStories(storyIds).then(stories => {
         setStories(stories)
-        setIsLoading(false)
+        // setIsLoading(false)
       })
     }
   }, [storyIds, count])

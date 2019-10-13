@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Loader from 'react-loader-spinner'
-import { getStories, getStoryIds } from '../services/action'
 import StoryCard from './StoryCard'
 import { useStoryIds } from '../customHooks/useStoryIds'
 import { useScrollListener } from '../customHooks/useScrollListener'
@@ -143,6 +142,7 @@ const Button = styled.button`
   padding: 0.8em 1em;
   margin: 0 2em;
   border-style: none;
+  font-size: 1em;
   cursor: pointer;
   &:hover {
     background-color: #faa600;
@@ -165,6 +165,9 @@ const StoryContainer = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    .loader {
+      margin-bottom: 5em;
+    }
   }
 `
 const Select = styled.select`

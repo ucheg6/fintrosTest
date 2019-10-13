@@ -11,71 +11,51 @@ const FooterComponent = () => {
         <FooterUl>
           <FooterLi>About us</FooterLi>
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/who-we-are">
-              Who we are
-            </a>
+            <a href="#">Who we are</a>
           </FooterLi>
         </FooterUl>
         <FooterUl>
           <FooterLi className="white">Learn more</FooterLi>
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/details">The Details</a>
+            <a href="#">The Details</a>
           </FooterLi>
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/investing-101">
-              Investing 101
-            </a>
+            <a href="#">Investing 101</a>
           </FooterLi>
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/socially-responsible-investing">
-              Responsible investing
-            </a>
+            <a href="#">Responsible investing</a>
           </FooterLi>
 
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/halal-investing">
-              Halal investing
-            </a>
+            <a href="#">Halal investing</a>
           </FooterLi>
 
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/black">
-              Wealthsimple Black
-            </a>
+            <a href="#">Wealthsimple Black</a>
           </FooterLi>
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/magazine">Magazine</a>
+            <a href="#">Magazine</a>
           </FooterLi>
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/portfolio-review">
-              Financial Portfolio Review
-            </a>
+            <a href="#">Financial Portfolio Review</a>
           </FooterLi>
         </FooterUl>
 
         <FooterUl>
           <FooterLi>Legal</FooterLi>
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/legal/terms">
-              Terms of use
-            </a>
+            <a href="#">Terms of use</a>
           </FooterLi>
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/legal/privacy">
-              Privacy policy
-            </a>
+            <a href="#">Privacy policy</a>
           </FooterLi>
 
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/legal/disclosure">
-              Full disclosure
-            </a>
+            <a href="#">Full disclosure</a>
           </FooterLi>
 
           <FooterLi>
-            <a href="https://www.wealthsimple.com/en-ca/legal/file-complaint">
-              File a complaint
-            </a>
+            <a href="#">File a complaint</a>
           </FooterLi>
         </FooterUl>
 
@@ -106,7 +86,7 @@ const FooterComponent = () => {
         <FooterUl>
           <FooterLi>Questions?</FooterLi>
           <FooterLi>
-            <a href="https://help.wealthsimple.com/hc/en-ca/">Support centre</a>
+            <a href="#">Support centre</a>
           </FooterLi>
         </FooterUl>
 
@@ -285,6 +265,13 @@ const FooterEnd = styled.div`
         right: -1em;
         top: 50%;
         width: 2px;
+      }
+
+      @media (max-width: 768px) {
+        display: block;
+        &::after {
+          content: none;
+        }
       }
     }
   }

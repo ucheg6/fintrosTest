@@ -7,32 +7,27 @@ const mobileHeader =
 const NavbarComponent = () => {
   return (
     <Navbar>
-      {isMobile() ? (
-        <div className="nav-mobile">
-          <img src={mobileHeader} className="img-height" />
-          <NavbarBurger
-            role="button"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navMenu"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </NavbarBurger>
-        </div>
-      ) : (
-        <Logo href="/">Wealthsimple</Logo>
-      )}
+      <div className="nav-mobile">
+        <img src={mobileHeader} className="img-height" />
+        <NavbarBurger
+          role="button"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navMenu"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </NavbarBurger>
+      </div>
+      <Logo href="/">Wealthsimple</Logo>
 
-      {isMobile() ? null : (
-        <div>
-          <MenuLinks href="#">The Details</MenuLinks>
-          <MenuLinks href="#">Magazine</MenuLinks>
-          <MenuLinks href="#">Sign In</MenuLinks>
-          <MenuLinks href="#">Start Investing</MenuLinks>
-        </div>
-      )}
+      <div className="menulinks">
+        <MenuLinks href="#">The Details</MenuLinks>
+        <MenuLinks href="#">Magazine</MenuLinks>
+        <MenuLinks href="#">Sign In</MenuLinks>
+        <MenuLinks href="#">Start Investing</MenuLinks>
+      </div>
     </Navbar>
   )
 }
@@ -41,15 +36,30 @@ const Navbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5em ${isMobile() ? '1em' : '8em'};
+  padding: 0.5em 8em;
   height: 90px;
   background-color: #fff;
   .nav-mobile {
-    display: flex;
+    display: none;
     flex-grow: 10;
     .img-height {
       height: 3em;
       padding-left: 0.5em;
+    }
+  }
+
+  @media (max-width: 888px) {
+    padding: 0.5em 3em;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5em 1em;
+
+    .nav-mobile {
+      display: flex;
+    }
+    .menulinks {
+      display: none;
     }
   }
 `
@@ -60,6 +70,9 @@ const Logo = styled.a`
   font-size: 2em;
   font-weight: bolder;
   color: #333;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const MenuLinks = styled.a`
