@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import StoryImage from './storyImage'
+import StoryImage from './StoryImage'
 
 const StoryCardComponent = ({ url, title, text }) => {
   return (
