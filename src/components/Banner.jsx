@@ -26,6 +26,11 @@ const Section = styled.section`
   background-image: url('https://wealthsimple-grow.ghost.io/content/images/2019/10/van_final_color--1--1.jpg');
   background-size: cover;
   padding: 0 3em;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
 `
 
 const Aside = styled.aside`
@@ -50,6 +55,16 @@ const Aside = styled.aside`
   }
   p {
     line-height: 2em;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    bottom: -370px;
+    margin: 0;
+    width: 100%;
+    padding: 1em 2em;
   }
 `
 export default BannerComponent

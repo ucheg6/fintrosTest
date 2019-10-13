@@ -23,6 +23,9 @@ const StoryCardComponent = ({ url, title, text }) => {
 
 const StoryCard = styled.article`
   background-color: #fff;
+  @media (max-width: 768px) {
+    margin: 1em;
+  }
 `
 
 const StoryCardHeader = styled.a`
@@ -34,6 +37,9 @@ const StoryCardHeader = styled.a`
 
 const StoryContent = styled.div`
   padding: 3em;
+  @media (max-width: 768px) {
+    padding: 1em;
+  }
 `
 
 const StoryDescription = styled.p`

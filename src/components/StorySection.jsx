@@ -132,6 +132,9 @@ const Section = styled.section`
       margin-left: -90px;
     }
   }
+  @media (max-width: 768px) {
+    margin-top: 25em;
+  }
 `
 const Button = styled.button`
   background-color: #ffb21a;
@@ -159,6 +162,10 @@ const StoryContainer = styled.div`
   .loader {
     margin: 0 auto;
   }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 const Select = styled.select`
   display: block;
@@ -184,5 +191,8 @@ const Select = styled.select`
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.65em auto, 100%;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 export default StorySection

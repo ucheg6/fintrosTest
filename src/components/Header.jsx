@@ -34,6 +34,9 @@ const Section = styled.section`
   padding: 10em 8em;
   padding-bottom: 5em;
   align-items: center;
+  @media (max-width: 768px) {
+    padding: 4em 2em;
+  }
 `
 const H1 = styled.h1`
   font-family: 'DM Serif Display', serif;
@@ -43,12 +46,19 @@ const H1 = styled.h1`
     font-size: 2em;
   }
   line-height: 1.2em;
+  @media (max-width: 768px) {
+    font-size: 4em;
+  }
 `
 const P = styled.p`
   font-size: 0.8em;
   font-weight: bold;
   color: #999;
   letter-spacing: 0.2em;
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
 `
 const Ul = styled.ul`
   display: flex;
@@ -84,6 +94,9 @@ const Ul = styled.ul`
       &:before {
         content: none;
       }
+    }
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 `

@@ -215,12 +215,20 @@ const Footer = styled.footer`
   .transparent-5 {
     opacity: 0.5;
   }
+  @media (max-width: 768px) {
+    padding: 0 2em;
+  }
 `
 
 const FooterSection = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 4em 0;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+  }
 `
 
 const FooterUl = styled.ul`
@@ -228,6 +236,9 @@ const FooterUl = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  @media (max-width: 768px) {
+    padding: -0.5em;
+  }
 `
 
 const FooterLi = styled.li`
