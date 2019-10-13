@@ -12,10 +12,11 @@ const dropdownOptions = [
   'Odd Numbered Stories',
   'Even Numbered Stories'
 ]
+
+// const cachedStories = JSON.parse(localStorage.getItem('stories'))
 const StorySection = () => {
   const [count, setCount] = useState(30)
   const [scrollPercentage, setScrollPercentage] = useState(0)
-  const [filter, setFilter] = useState(dropdownOptions[0])
 
   const storyIds = useStoryIds()
   const [stories, isLoading] = useStories(storyIds, count)
@@ -36,8 +37,6 @@ const StorySection = () => {
 
   const handleFilter = event => {
     const selectedFilter = event.target.value
-
-    setFilter(selectedFilter)
 
     const filteredStories = stories.filter(story => {
       if (selectedFilter === 'All Stories') return true
@@ -81,7 +80,7 @@ const StorySection = () => {
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
       <div className="right">
-        <Select value={filter} onChange={handleFilter}>
+        <Select onChange={handleFilter}>
           {dropdownOptions.map((opt, i) => (
             <option key={i} value={opt}>
               {opt}

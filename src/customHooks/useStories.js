@@ -7,8 +7,6 @@ export function useStories(storyIds, count) {
 
   useEffect(() => {
     if (storyIds.length) {
-      //   setIsLoading(true)
-
       getStories(storyIds).then(stories => {
         setStories(stories)
         setIsLoading(false)

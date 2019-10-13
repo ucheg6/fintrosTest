@@ -7,7 +7,7 @@ export function useScrollListener(setScrollPercentage) {
     const windowHeight = window.innerHeight
     const bodyHeight = docHeight - windowHeight
     const scrollPercentage = scroll / bodyHeight
-    setScrollPercentage(scrollPercentage)
+    // setScrollPercentage(scrollPercentage)
   }
 
   useEffect(() => {

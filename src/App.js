@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Navbar, Header, Banner, StorySection, Footer } from './components'
 
 const App = () => {
@@ -9,7 +8,7 @@ const App = () => {
       <Header />
       <Banner />
       <StorySection />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
