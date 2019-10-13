@@ -28,7 +28,7 @@ const StorySection = () => {
   }, [stories])
 
   useEffect(() => {
-    if (stories.length > 0 && scrollPercentage > 0.99) {
+    if (stories.length > 0 && scrollPercentage > 0.9) {
       setCount(count + 30)
     }
     // eslint-disable-next-line

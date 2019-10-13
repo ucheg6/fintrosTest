@@ -7,8 +7,15 @@ export function useStories(storyIds, count) {
 
   useEffect(() => {
     if (storyIds.length) {
-      getStories(storyIds).then(stories => {
-        setStories(stories)
+      const idsToFetch = []
+      const oldStories = [...stories]
+
+      for (let i = count - 30; i < count; i++) {
+        idsToFetch.push(storyIds[i])
+      }
+
+      getStories(idsToFetch).then(stories => {
+        setStories([...oldStories, ...stories])
         setIsLoading(false)
       })
     }
