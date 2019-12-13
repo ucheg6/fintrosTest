@@ -12,7 +12,6 @@ const dropdownOptions = [
   'Even Numbered Stories'
 ]
 
-// const cachedStories = JSON.parse(localStorage.getItem('stories'))
 const StorySection = () => {
   const [count, setCount] = useState(30)
   const [scrollPercentage, setScrollPercentage] = useState(0)

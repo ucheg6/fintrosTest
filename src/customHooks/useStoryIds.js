@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getStories, getStoryIds } from '../services/action'
+import { getStoryIds } from '../services/action'
 
 export function useStoryIds() {
   const [storyIds, setStoryIds] = useState([])
